@@ -7,156 +7,96 @@
   <title>TMOY-Clone</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="./css/style.css">
-  <link rel="stylesheet" href="./css/navbar.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="./css/signin.css">
+  <link rel="stylesheet" href="./css/background.css">
 </head>
 
-<body>
+<style>
+  .bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
 
-  <header class="header">
-    <div class="header__container">
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
 
-      <a href="#" class="header__logo">Trafik Müdürlüğü Operasyon Yönetimi</a>
+  .b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+  }
 
-      
-    </div>
-  </header>
+  .b-example-vr {
+    flex-shrink: 0;
+    width: 1.5rem;
+    height: 100vh;
+  }
 
-  <div class="nav" id="navbar">
-    <nav class="nav__container">
-      <div>
-        <a href="#" class="nav__link nav__logo">
-          <i class='bx bxs-disc nav__icon'></i>
-          <span class="nav__logo-name">Furkan Beytullah TURHAN</span>
-        </a>
+  .bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+  }
 
-        <div class="nav__list">
-          <div class="nav__items">
+  .nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+  }
+
+  .nav-scroller .nav {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+</style>
 
 
-            <a href="#" class="nav__link active">
-              <i class='bx bx-home nav__icon'></i>
-              <span class="nav__name">Anasayfa</span>
-            </a>
+<body class="text-center">
 
-            <div class="nav__dropdown">
-              <a href="#" class="nav__link">
-                <i class='bx bx-user nav__icon'></i>
-                <span class="nav__name">Tanımlananlar</span>
-                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-              </a>
 
-              <div class="nav__dropdown-collapse">
-                <div class="nav__dropdown-content">
-                  <a href="#" class="nav__dropdown-item">Kullanıcılar</a>
-                  <a href="#" class="nav__dropdown-item">Görev Ekipleri</a>
-                  <a href="#" class="nav__dropdown-item">Roller</a>
-                  <a href="#" class="nav__dropdown-item">Yükleniciler</a>
-                  <a href="#" class="nav__dropdown-item">Depo</a>
-                  <a href="#" class="nav__dropdown-item">Birimler</a>
-                </div>
-              </div>
-            </div>
-            <div class="nav__dropdown">
-              <a href="#" class="nav__link">
-                <i class='bx bx-user nav__icon'></i>
-                <span class="nav__name">Yönetim</span>
-                <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-              </a>
-
-              <div class="nav__dropdown-collapse">
-                <div class="nav__dropdown-content">
-                  <a href="#" class="nav__dropdown-item">Kullanım Modu Yönetimi</a>
-                  <a href="#" class="nav__dropdown-item">Offline Süreç Veri Yönetimi</a>
-                  <a href="#" class="nav__dropdown-item">Barkod Yönetimi</a>
-                </div>
-              </div>
-            </div>
-
-            <a href="#" class="nav__link">
-              <i class='bx bxs-cloud-upload nav__icon' ></i>
-              <span class="nav__name">Export</span>
-            </a>
-          </div>
-
-          <div class="nav__dropdown">
-            <a href="#" class="nav__link">
-              <i class='bx bxs-truck nav__icon'></i>
-              <span class="nav__name">Ayniyat</span>
-              <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-            </a>
-
-            <div class="nav__dropdown-collapse">
-              <div class="nav__dropdown-content">
-                <a href="#" class="nav__dropdown-item">Ayniyat Depo</a>
-                <a href="#" class="nav__dropdown-item">Ayniyat Giriş & Çıkış İşlemler</a>
-                <a href="#" class="nav__dropdown-item">Ayniyat Depo Stok Durumu</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="nav__dropdown">
-            <a href="#" class="nav__link">
-              <i class='bx bx-no-entry nav__icon'></i>
-              <span class="nav__name">Düşey İşaretleme</span>
-              <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-            </a>
-
-            <div class="nav__dropdown-collapse">
-              <div class="nav__dropdown-content">
-                <a href="#" class="nav__dropdown-item">Denetlemeler</a>
-                <a href="#" class="nav__dropdown-item">Giriş & Çıkış İşlemleri</a>
-                <a href="#" class="nav__dropdown-item">Görevler</a>
-                <a href="#" class="nav__dropdown-item">Malzemeler</a>
-                <a href="#" class="nav__dropdown-item">Uygulamalar</a>
-                <a href="#" class="nav__dropdown-item">Mevcut Uygulamalar</a>
-                <a href="#" class="nav__dropdown-item">Sirkülasyonlar</a>
-                <a href="#" class="nav__dropdown-item">Trafik Nesne Türleri</a>
-                <a href="#" class="nav__dropdown-item">Trafik Nesneleri</a>
-                <a href="#" class="nav__dropdown-item">Depo Stok Durumu</a>
-                
-                  <div class="nav__dropdown">
-                    <a href="#" class="nav__link">
-                      <i class='bx bxs-file-doc nav__icon'></i>
-                      <span class="nav__name">Raporlar</span>
-                      <i class='bx bx-chevron-down nav__icon nav__dropdown-icon'></i>
-                    </a>
-        
-                    <div class="nav__dropdown-collapse">
-                      <div class="nav__dropdown-content">
-                        <a href="#" class="nav__dropdown-item">Kullanıcı Performans Raporu</a>
-                        <a href="#" class="nav__dropdown-item">Günlük Çalışma Raporu</a>
-                        <a href="#" class="nav__dropdown-item">Bakım Onarım Raporu</a>
-                        <a href="#" class="nav__dropdown-item">Eski Malzeme Raporu</a>
-                        <a href="#" class="nav__dropdown-item">Depo Hareket Çıkış Raporu</a>
-                        <a href="#" class="nav__dropdown-item">Depo Hareket Giriş Raporu</a>
-                        <a href="#" class="nav__dropdown-item">Türe Göre Malzeme Raporu</a>
-                        <a href="#" class="nav__dropdown-item">Sahada Yapılan Malzeme Raporu</a>
-                      </div>
-                    </div>
-                  </div>
-                
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-
-      <a href="#" class="nav__link nav__logout">
-        <i class='bx bx-log-out nav__icon'></i>
-        <span class="nav__name">Çıkış Yap</span>
-      </a>
-    </nav>
+  <div class="ocean">
+    <div class="wave"></div>
+    <div class="wave"></div>
   </div>
 
-  <!--========== CONTENTS ==========-->
-  <main>
-    <section>
-      
-    </section>
-  </main>
+
+
+  <main class="form-signin w-100 m-auto">
+    <form>
+      <img class="mb-4" src="./img/tmoy-logo.svg" alt="" width="90%">
+      <h1 class="h3 mb-3 fw-normal">Giriş Yap</h1>
+
+      <div class="form-floating">
+        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+        <label for="floatingInput">E-Posta</label>
+      </div>
+      <div class="form-floating">
+        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <label for="floatingPassword">Parola</label>
+      </div>
+
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Beni Hatırla
+        </label>
+      </div>
+      <a href="./index.html" class="w-100 btn btn-lg btn-primary" type="submit">Giriş Yap</a>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017</p>
+    </form>
 
 
 
@@ -166,21 +106,15 @@
 
 
 
-
-
-
-
-  <script src="assets/js/main.js"></script>
-  <script src="./js/navbar.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
-    integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
-    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
